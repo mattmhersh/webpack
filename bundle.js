@@ -63,16 +63,47 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-document.write("Welcome to big hair concepts");
+__webpack_require__(2);
+
+document.write("Welcome to big hair concepts!!");
 
 console.log('App Loaded');
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports) {
+
+// This is global js provided to all apps
+console.log('logging from the utils.js file...');
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+let login = (username, password) => {
+    if (username !== 'admin' || password !== "radical") {
+        console.log("Incorrect login");
+    }
+};
+
+login('admin', 'idunno');
+
+ 
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(1);
+module.exports = __webpack_require__(0);
+
 
 /***/ })
 /******/ ]);
